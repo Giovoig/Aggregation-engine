@@ -1,0 +1,6 @@
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+
+report_utilization -file /users/students/r0875167/GNN-on-server/GNN-accelerator/generated_reports/IMPL/6_6_util.txt -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file /users/students/r0875167/GNN-on-server/GNN-accelerator/generated_reports/SYNTH/6_6_timing.txt

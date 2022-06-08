@@ -1,0 +1,15 @@
+#open_project GNN_accelerator/GNN_accelerator.xpr
+set_property -name {xsim.elaborate.debug_level} -value {off} -objects [get_filesets unpartitioned]
+set_property -name {xsim.elaborate.debug_level} -value {off} -objects [get_filesets partitioned]
+
+set_property -name {xsim.simulate.log_all_signals} -value {false} -objects [get_filesets unpartitioned]
+set_property -name {xsim.simulate.log_all_signals} -value {false} -objects [get_filesets unpartitioned]
+
+set_property -name {xsim.simulate.runtime} -value {all} -objects [get_filesets unpartitioned]
+set_property -name {xsim.simulate.runtime} -value {all} -objects [get_filesets partitioned]
+
+#launch_sim -simset [get_fileset unpartitioned]
+#close_sim
+
+launch_sim -simset [get_fileset partitioned]
+close_sim
